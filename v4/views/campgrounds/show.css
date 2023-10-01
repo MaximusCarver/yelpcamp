@@ -1,0 +1,48 @@
+h1 {
+		text-align: center;
+		margin-top: 50px;
+		color: steelblue;
+		}
+
+img {
+	width: 800px;
+	height: 600px;
+	margin-left: 575px;
+	margin-top: 50px;
+}
+
+.des {
+	text-align: center;
+	margin-top: 75px;
+	color: steelblue;
+}
+
+.des-text {
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+
+.commentDiv {
+	border: 2px solid grey;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.newBtn {
+	color: white;
+	background: steelblue;
+	margin-top: 50px;
+}
+
+.new-a {
+	color: white;
+}
+
+.back-button {
+	background: steelblue;
+}
+
+.a-back-button {
+	color: white;
+}

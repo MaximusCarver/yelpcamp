@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		
+		<style type="text/css">
+			img {
+				height: 250px;
+				width: 250px;
+				float: left;
+				margin-right: 0;
+			}
+			
+			h1 {
+				text-align: center;
+				color: steelblue;
+			}
+			
+			h3 {
+				text-align: center;
+				margin-top: 25px;
+			}
+			
+			
+			
+			.thumbnail {
+				width: 350px;
+				margin-right: 25px;
+				margin-top: 50px;
+				border: lightgrey 1px solid;
+			}
+			
+		
+ 			.card-title {
+				text-align: center;
+				color: steelblue;
+				margin-bottom: 5px;
+			}
+			
+			.myNavbar {
+				background: lightgrey;
+				height: 50px;
+			}
+			
+			.nav-link {
+				color: steelblue;
+			}
+			
+			
+			.card-text {
+				text-align: center;
+			}
+			
+			.btn-div {
+				justify-content: center;
+				background: lightblue;
+				margin-left: 120px;
+				margin-bottom: 15px;
+			}
+			
+			.btn-a {
+				color: navy;
+			}
+			
+			img {
+				margin-bottom: 15px;
+			}
+			
+			.PostBtn {
+				background: lightblue;
+				color: navy;
+			}
+			
+			.PostDiv {
+				margin-top: 25px;
+			}
+			
+			.Post-a {
+				color: navy;
+			}
+			
+			.jumbotron {
+				margin-top: 50px;
+			}
+			
+			
+			
+			
+			
+		</style>
+		
+	</head>
+	
+	
+	<body>
+
+		<nav class="navbar navbar-expand-lg myNavbar">
+  <a class="navbar-brand" href="#">YelpCamp</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+	  </ul>
+	  
+	  <ul class="nav navbar-nav navbar-right">
+		  <li>
+			  <a href="/">Login</a>
+		  </li>
+	  </ul>
+	</div>
+</nav>
+		
+			 
+		<div class="container">
+			
+			
+			<div class="jumbotron">
+				
+				<h1>
+					Welcome to YelpCamp!
+				</h1>
+				
+				<h3>
+					View our most beautiful campsites across Nature's various environments!
+				</h3>
+				
+				
+				
+			
+				<div class="PostDiv d-flex justify-content-center">
+					
+					<button class="btn PostBtn">
+					<a class="Post-a" href="/PostCampsite">
+						Post a Campsite
+						</a>
+
+					</button>
+					
+				</div>
+					 
+					 
+			</div>
+
+		
+			
+			<div class="row">
+				
+			<% CampsiteSearcher.forEach(function(item){ %>
+			
+			<div class="thumbnail">
+				<img class="card-img-bottom cardImage" src= "<%= item.image %>">
+				<div class="card-title">
+									<%= item.name %>	
+				</div>
+				
+				<hr>
+				
+					<div class="card-text">
+					<%= item.description %>
+					</div>
+				
+				
+				<div class="btn btn-div">
+					<a class="btn-a" href="/campgrounds/<%=item._id%>">Learn more</a>
+				</div>
+					
+			
+			</div>
+			
+				
+				<% }) %>
+		
+				
+
+				</div>
+
+		
+	
+	
+		</div>
+
+</body>
+
+</html>	
