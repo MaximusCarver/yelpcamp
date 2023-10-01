@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./show.css">
+
+		
+		
+	</head>
+	
+	
+	<body>
+
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="list-group">
+						<li class="list-group-item">Item 1</li>
+						<li class="list-group-item">Item 2</li>
+						<li class="list-group-item">Item 3</li>
+
+					</div>
+				</div>
+				
+				<div class="col-md-9">
+					
+					<div class="img-thumbnail">
+						<img class="img-fluid" src="<%= campground.image %>">
+						<div class="caption-full captionFull1">
+
+							<h4 class="float-right">
+								$11.00/Month
+							</h4>
+							<h4>
+								<a class="campLink"><%= campground.name %></a>
+							</h4>
+							
+							
+						</div>
+						<p class="des-text d-flex justify-content-center">
+							<%= campground.description %>
+						</p>
+					</div>
+					
+					<div class="img-thumbnail imgThumb2">
+						<div class="col">
+							<button class="float-right btn btn-success postBtn"><a class="new-a" href="/campgrounds/<%=campground._id%>/comments/new">Post a Comment</a></button>
+						</div>
+
+						<hr class="hr">
+						<div class="caption-full captionFull2">
+							<% campground.comment.forEach(function(commentFound){ %>
+
+								<p class="author-p"><strong><%= commentFound.author %></strong></p> 
+			  					<p class="text-p"><%= commentFound.comment %></p>
+
+							<% }) %>
+		
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			
+		</div>
+
+		
+		
+		
+			
+		</body>
+
+</html>	

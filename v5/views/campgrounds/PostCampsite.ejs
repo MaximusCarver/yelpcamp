@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		
+		<style type="text/css">
+			.myDiv1 {
+			text-align: center;
+			color: steelblue;
+				height: 100px;
+				margin-top: 50px;
+				margin-bottom: 50px;
+			}
+			
+			.h1-1 {
+			}
+			
+			.form1 {
+				text-align: center;
+			}
+		
+			.submitButton {
+				background: lime;
+				color: turquoise;
+				border: none;
+			}
+			
+			input {
+				border: turquoise 2px solid;
+				color: steelblue;
+			}
+					
+		nav {
+			background: lightgrey;
+			color: steelblue;
+		}
+			
+			.row {
+				margin: 0 auto;
+			}
+			
+		
+			.FormStyleDiv {
+				width: 30%;
+			}
+			
+			.mySubmitButton {
+				width: 100%;
+				height: 50px;
+			}
+			
+			.nav-li {
+				margin-left: 7px;
+				margin-right: 7px;
+			}
+		
+			input {
+				text-align: center;
+			}
+			
+		</style>
+		
+	</head>
+	
+	<body>
+		
+		<nav class="navbar navbar-expand-lg myNavbar">
+  <a class="navbar-brand" href="#">YelpCamp</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+	  </ul>
+	  
+	  <ul class="nav navbar-nav navbar-right">
+		  <li class="nav-li">
+			  <a href="/">Login</a>
+		  </li>
+		  <li class="nav-li">
+			  <a href="/">Logout</a>
+		  </li>
+		  <li class="nav-li">
+			  <a href="/">Sign Up</a>
+		  </li>
+	  </ul>
+	</div>
+</nav>
+		
+		
+		
+	
+		<div class="myDiv1">
+		<h1 class="h1-1">
+			Post A Campsite
+		</h1>
+		
+			<h5>
+			Post any campsite image and name
+			</h5>
+		</div>
+
+		<div class="row justify-content-center">
+			
+			<div class="FormStyleDiv">
+	
+	
+		<form class="form1" action="/campgrounds" method="POST">
+			
+				
+				<div class="form-group form-control-lg">
+					<input class="form-control" type="text" name="PostCampInput" placeholder="Name Campsite">
+			</div>
+			
+			<div class="form-group form-control-lg">
+					<input class="form-control" type="text" name="PostCampPic" placeholder="Picture">
+			</div>
+			
+			<div class="form-group form-control-lg">
+					<input class="form-control" type="text" name="PostCampDes" placeholder="Description">
+			</div>
+		
+		<div class="form-group form-control-lg">
+					<button class="btn btn-success mySubmitButton">
+				
+				Submit
+						
+			</button>
+			
+			</div>
+					
+	
+
+		</form>
+	
+			</div>
+			
+			</div>
+			
+	
+	</body>
+
+</html>	
