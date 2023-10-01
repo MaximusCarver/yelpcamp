@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		
+	<style tpe="text/css">
+		
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			color: steelblue;
+		}
+		
+		img {
+			width: 800px;
+			height: 600px;
+			margin-left: 575px;
+			margin-top: 50px;
+		}
+		
+		.des {
+			text-align: center;
+			margin-top: 75px;
+			color: steelblue;
+		}
+		
+		.des-text {
+			text-align: center;
+			margin-top: 25px;
+		}
+		
+		.commentDiv {
+			border: 2px solid grey;
+			text-align: center;
+		}
+		
+		</style>
+		
+	</head>
+	
+	
+	<body>
+
+
+<h1>
+	<%= campground.name %>
+</h1>
+		
+		
+<img src="<%= campground.image %>">
+		
+		
+		
+		<div class="container">
+			
+		<h2 class="des">
+			Description
+		</h2>
+		
+		
+		<p class="des-text">
+			<%= campground.description %>
+		</p>
+			
+			<% campground.comment.forEach(function(commentFound){ %>
+			  		<div class="commentDiv"><i><%= commentFound.author %></i> - <%= commentFound.comment %></div>
+
+					<% }) %>
+		
+		
+				</div>
+
+		
+		</body>
+
+</html>	
