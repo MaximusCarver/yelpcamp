@@ -1,0 +1,87 @@
+.main-h1 {
+	z-index: 1;
+	position: relative;
+	color: white;
+	text-align: center;
+	margin-top: 200px;
+}
+
+.main-btn {
+	text-align: center;
+	margin-bottom: 10px;
+	z-index: 1;
+}
+
+.slideshow {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.slideshow li {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	opacity: 0;
+	animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1){
+	background-image: url("https://cdn.hiconsumption.com/wp-content/uploads/2015/06/Best-Places-To-Camp-In-The-US-0-FB-Hero.jpg")
+}
+
+.slideshow li:nth-child(2){
+	background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=%5B800%2C500%5D&w=1600&h=1067&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F28%2F2018%2F05%2Fsawtooth-national-forest-idaho-SCENICCAMP0118.jpg");
+	animation-delay: 10s;
+}
+
+.slideshow li:nth-child(3){
+	background-image: url("https://blog-assets.thedyrt.com/uploads/2018/12/valley-of-fire-state-park_f0e93e16ffbaf21db3aaca04188848a3.jpg");
+	animation-delay: 20s;
+}
+
+.slideshow li:nth-child(4){
+	background-image: url("https://www.reviewjournal.com/wp-content/uploads/2015/07/web1_joshua-tree_0.jpg?w=640");
+	animation-delay: 30s;
+}
+
+.slideshow li:nth-child(5){
+	background-image: url("https://gudgear.com/wp-content/uploads/2019/05/best-places-to-camp-in-the-united-states.jpg");
+	animation-delay: 40s;
+}
+
+
+@keyframes imageAnimation {
+	0% {
+		opacity: 0;
+		animation-timing-function: ease-in;
+	}
+	
+	10% {
+		opacity: 1;
+		animation-timing-function: ease-out;
+	}
+	
+	20% {
+		opacity: 1;
+	}
+	
+	30% {
+		opacity: 0;
+	}
+}
